@@ -96,6 +96,20 @@ git restore archivoenstage.txt
 ```
 ---
 
+#### MOVERNOS POR COMMITS, BRANCH
+
+```bash
+git checkout idcommit
+
+//ultimo commit
+git reset
+
+//ir a un commit y borrar los posteriores. Si se borraron y vovemos a realizarlo
+//se generan de nuevo hasta el commit indicado.
+//Es decir, es de ida y de vuelta
+git reset --hard idcommit
+```
+
 #### ELIMINAR ARCHIVO
 
 **Tras eliminar un archivo, status nos dira que hay un cambio.**
@@ -139,6 +153,7 @@ git diff --staged
 ```
 // se navega con barra espaciadora
 git log
+git reflog
 
 // resumido
 git log --oneline
