@@ -64,6 +64,7 @@ git add archivo.txt
 ```
 
 **Commited es como confirmar el stage**
+
 **Con TAG asignamos una etiqueta a ese commit**
 
 ```bash
