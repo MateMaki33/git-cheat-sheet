@@ -1,6 +1,6 @@
 # COMANDOS GIT FUNDAMENTALES
 
-#### CONFIGURACIÓN INICIAL
+#### 📢CONFIGURACIÓN INICIAL
 
 ```bash
 
@@ -23,7 +23,7 @@
 
 ---
 
-#### INICIAR UN REPOSITORIO
+#### 📢INICIAR UN REPOSITORIO
 
 ```bash
 git init
@@ -76,7 +76,7 @@ git tag nombre_punto_clave
 
 ---
 
-#### STATUS
+#### 📢STATUS
 
 ```bash
 git status
@@ -86,7 +86,7 @@ git status -m
 
 ```
 ---
-#### RESTORE UN STAGE
+#### 📢RESTORE UN STAGE
 
 ```bash
 git restore --staged archivoenstage.txt
@@ -101,7 +101,7 @@ git restore archivoenstage.txt
 ```
 ---
 
-#### MOVERNOS POR COMMITS, BRANCH
+#### 📢MOVERNOS POR COMMITS, BRANCH
 
 ```bash
 git checkout idcommit
@@ -116,7 +116,7 @@ git reset
 git reset --hard idcommit
 ```
 
-#### ELIMINAR ARCHIVO
+#### 📢ELIMINAR ARCHIVO
 
 **Tras eliminar un archivo, status nos dira que hay un cambio.**
 \n**Por ello tendremos que añadir el archivo al stage y luego commit**
@@ -128,7 +128,7 @@ git rm archivo.txt
 
 ```
 ---
-#### CAMBIO DE NOMBRE DE ARCHIVO
+#### 📢CAMBIO DE NOMBRE DE ARCHIVO
 
 ```bash
 mv archivo.txt archivomodificado.txt
@@ -143,7 +143,7 @@ git mv archivo.txt archivomodificado.txt
 
 ```
 ---
-#### VER LOS CAMBIOS REALIZADOS 
+#### 📢VER LOS CAMBIOS REALIZADOS 
 
 ```
 // no staged
@@ -154,7 +154,7 @@ git diff --staged
 
 ```
 ---
-#### HISTORIAL
+#### 📢HISTORIAL
 
 ```
 // se navega con barra espaciadora
@@ -167,7 +167,7 @@ git log --oneline
 ```
 
 ---
-#### TRABAJANDO CON RAMAS
+#### 📢TRABAJANDO CON RAMAS
 
 **Comprobar la rama actual**
 
@@ -205,7 +205,7 @@ git merge nombrerama // rama que quieres traer
 git branch -d rama
 ```
 ---
-#### GITHUB
+#### 📢GITHUB
 
 1. Crea un repositorio
 2. Añadimos el repositorio remoto
