@@ -198,6 +198,12 @@ git switch rama
 git merge nombrerama // rama que quieres traer
 
 ```
+
+**Borrar rama** 
+
+```bash
+git branch -d rama
+```
 ---
 #### GITHUB
 
