@@ -1,4 +1,4 @@
-# COMANDOS GIT FUNDAMENTALES
+t# COMANDOS GIT FUNDAMENTALES
 
 #### 📢CONFIGURACIÓN INICIAL
 
@@ -18,6 +18,10 @@
 
 // ver contenido del archivo
 6.cat archivo.txt
+
+//Alias
+$ git config --global alias.graph "log --graph --decorate --all --oneline"
+
 
 ```
 
