@@ -105,19 +105,34 @@ git restore archivoenstage.txt
 ```
 ---
 
-#### 📢MOVERNOS POR COMMITS, BRANCH
+#### 📢MOVERNOS POR COMMITS, BORRADO
 
 ```bash
 git checkout idcommit
 
-//ultimo commit
-git reset
+//borra los datos del HEAD tanto en indice como en workdirectory y regresa al commit anterior
+git reset --hard HEAD~1
+
+//mantiene cambios en el indice y en el workdirectory para ser commiteados
+git reset --soft HAED~1
+
+//mantiene cambios en el area de trabajo pero no en indice
+git reset --mixed HEAD~1
 
 //ir a un commit y borrar los posteriores. Si se borraron y vovemos a realizarlo
 //se generan de nuevo hasta el commit indicado.
 //Es decir, es de ida y de vuelta
 
 git reset --hard idcommit
+```
+
+```bash
+//Ir a un commit e iniciar nueva rama a partir de el para corregir.
+//Luego pudemos hacer merge
+
+git checkout 124facf
+git checkout -b nueva-rama
+
 ```
 
 #### 📢ELIMINAR ARCHIVO
