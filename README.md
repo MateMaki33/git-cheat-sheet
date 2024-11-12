@@ -94,9 +94,11 @@ git status -m
 ---
 #### 📢RESTORE UN STAGE VS RESET
 
-Cuando usas restore, se utiliza el ultimo commit para:
+Cuando usas restore, se utiliza el ultimo commit o un commit concreto para:
  - reestablecer el Working 
- - reestablecer el staging 
+ - reestablecer el staging
+ - donde señala el HEAD
+Es decir, se trae los cambios de un commit al punto actual o HEAD
 
 Git reset solo afecta al staging y elimina el contenido. No afecta al area de trabajo.
 Hace lo contrario de add. 
