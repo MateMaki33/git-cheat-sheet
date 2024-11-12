@@ -92,19 +92,32 @@ git status -m
 
 ```
 ---
-#### 📢RESTORE UN STAGE
+#### 📢RESTORE UN STAGE VS RESET
+
+Cuando usas restore, se utiliza el ultimo commit para:
+ - reestablecer el Working 
+ - reestablecer el staging 
+
+Git reset solo afecta al staging y elimina el contenido. No afecta al area de trabajo.
+Hace lo contrario de add. 
+
+Diferente es git reset --hard --mixin --soft que ademas mueven el puntero HEAD. git restore no
+
 
 ```bash
+git restore --source=HEAD --staged --worktree .
 git restore --staged archivoenstage.txt
+git restore  archivoenstage.txt
+git reset holaMundo.md
 
 ```
+| Comando                 | Afecta el área de staging | Afecta el área de trabajo | Mueve el `HEAD` | Uso común                                                         |
+|-------------------------|---------------------------|---------------------------|-----------------|------------------------------------------------------------------|
+| **`git reset --soft`**   | No                        | No                        | Sí, mueve el `HEAD` a un commit anterior | Deshacer un commit, pero mantener los archivos en staging       |
+| **`git reset --mixed`**  | Sí, elimina del staging   | No                        | Sí, mueve el `HEAD` a un commit anterior | Deshacer un commit, quitar del staging, pero mantener cambios en el área de trabajo |
+| **`git reset --hard`**   | Sí, elimina del staging   | Sí, descarta los cambios en el área de trabajo | Sí, mueve el `HEAD` a un commit anterior | Descartar completamente los cambios, restaurar al commit anterior |
+| **`git restore`**        | No (a menos que uses `--staged`) | Sí, restaurar archivos a un estado de commit específico | No              | Restaurar archivos a un estado anterior sin mover el `HEAD`      |
 
-**Si hemos borrado pero no añadido al stage podemos recuperar el archivo recién eliminado**
-
-```bash
-git restore archivoenstage.txt
-
-```
 ---
 
 #### 📢MOVERNOS POR COMMITS, BORRADO
@@ -115,8 +128,11 @@ git checkout idcommit
 //borra los datos del HEAD tanto en indice como en workdirectory y regresa al commit anterior
 git reset --hard HEAD~1
 
-//mantiene cambios en el indice y en el workdirectory para ser commiteados
-git reset --soft HAED~1
+//mantiene cambios en el indice y en el workdirectory para ser commiteados. Es decir,
+// Mueve el HEAD a un commit indicado o al anterior desaciendo el último sin tocar area
+// de trabajo o staging
+
+git reset --soft HAED~1 
 
 //mantiene cambios en el area de trabajo pero no en indice
 git reset --mixed HEAD~1
