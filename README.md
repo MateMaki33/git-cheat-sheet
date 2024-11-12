@@ -5,6 +5,8 @@ t# COMANDOS GIT FUNDAMENTALES
 ```bash
 
 1. git config --global user.name <"username">
+git config --global core.editor "code"
+
 2. git config --global user.email <useremail>
 
 //editor de código
